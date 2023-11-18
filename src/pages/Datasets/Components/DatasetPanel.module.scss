@@ -1,0 +1,33 @@
+@use "/src/variables.scss";
+
+.container {
+  border-color: variables.$highlight;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 20px;
+  background-color: variables.$background2;
+}
+
+.tagsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.detailsPanels{
+  display: flex;
+  flex-direction: row;
+}
+
+.p {
+  margin-top: 10px;
+  background-color: variables.$background3;
+}
+
+.roundContainer {
+  background-color: #0e5e4e;
+  padding: 4px 10px;
+  margin: 5px;
+  margin-top: 20px;
+  border-radius: 10px;
+}

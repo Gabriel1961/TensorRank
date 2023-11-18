@@ -1,0 +1,33 @@
+@use "../variables.scss";
+
+.image {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  overflow: hidden;
+  user-select: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: variables.$background3;
+}
+
+.image__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.image__fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: variables.$background3;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+}

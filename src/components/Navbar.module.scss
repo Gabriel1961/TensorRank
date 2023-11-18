@@ -1,0 +1,53 @@
+@use "../variables.scss";
+@import "../index.scss";
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  z-index: 4;
+}
+
+.phantomNav {
+  background-color: variables.$background2;
+  height: 65px;
+  width: 100%; 
+}
+
+.header {
+  @extend h1;
+  outline: none;
+  margin-left: 20px;
+  font-size: 1.1rem;
+  color: variables.$text;
+  &:hover {
+    color: variables.$highlight;
+  }
+}
+
+.activeHeader{
+  color: variables.$highlight;
+}
+
+.logoContainer {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  justify-self: flex-end;
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+}
+
+.profileImageContainer {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  margin-right: 20px;
+}

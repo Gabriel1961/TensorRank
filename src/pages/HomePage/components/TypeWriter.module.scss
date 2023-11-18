@@ -1,0 +1,10 @@
+@use "/src/variables.scss";
+
+.text {
+  font-size: 30px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 0px variables.$highlightDark;
+  z-index: 2;
+  width: 70%;
+  text-align: center;
+}

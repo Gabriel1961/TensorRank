@@ -1,0 +1,26 @@
+@use "/src/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 10px;
+  background-color: variables.$background2;
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.editor {
+  margin: 10px;
+  height: 400px;
+}
