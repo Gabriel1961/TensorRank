@@ -1,10 +1,10 @@
-import { Component, For, Show, createEffect, createSignal } from "solid-js"
-import styles from "./ScoreboardPage.module.scss"
+import { useParams } from "@solidjs/router"
+import { Component, For, createEffect, createSignal } from "solid-js"
 import { useLogin } from "../../contexts/loginContext"
 import { Solution } from "../../datamodel"
-import ScoreboardListItem from "./components/ScoreboardListItem"
 import { fetchScoreboard } from "./ScoreboardFetcher"
-import { useParams } from "@solidjs/router"
+import styles from "./ScoreboardPage.module.scss"
+import ScoreboardListItem from "./components/ScoreboardListItem"
 
 interface ScoreBoardPageParams {
   taskId?:string 

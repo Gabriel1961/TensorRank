@@ -1,7 +1,7 @@
-import { Accessor, Component, createEffect, createSignal } from "solid-js";
 import { Image } from "@kobalte/core";
-import user from "../assets/user.svg"
-import styles from "./ProfileImage.module.scss"
+import { Accessor, Component } from "solid-js";
+import user from "../assets/user.svg";
+import styles from "./ProfileImage.module.scss";
 interface ProfileImageProps {
   getImageUrl?: Accessor<string | undefined>,
   onClick: () => void

@@ -1,7 +1,7 @@
-import { ParentComponent, createEffect } from "solid-js";
-import { useLogin } from "./loginContext";
-import Spinner from "../components/Spinner";
 import { Navigate } from "@solidjs/router";
+import { ParentComponent } from "solid-js";
+import Spinner from "../components/Spinner";
+import { useLogin } from "./loginContext";
 
 const ProtectedRoute: ParentComponent = (props) => {
   const [getLoginContext] = useLogin()

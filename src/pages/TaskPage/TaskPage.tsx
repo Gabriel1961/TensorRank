@@ -34,7 +34,15 @@ const TaskPage: Component = () => {
     // load editor 
     const libUri = "ts:filename/tfjs.d.ts";
     const tfjsSource = await (await fetch("/src/assets/tfjs.txt")).text()
-    const defaultCode = await (await fetch("/src/assets/defaultCode.txt")).text()
+    const defaultCode = `
+const model = tf.sequential();
+model.add(tf.layers.dense({ inputShape: [4], units: 10, activation: 'relu' }));
+model.add(tf.layers.dense({ units: 3, activation: 'softmax' }));
+model.compile({ optimizer: 'sgd', loss: 'categoricalCrossentropy', metrics: ['accuracy'] });
+
+model // returns model
+    
+    `
     monaco.languages.typescript.javascriptDefaults.addExtraLib(tfjsSource, libUri);
     const textModel = monaco.editor.createModel(tfjsSource, "typescript", monaco.Uri.parse(libUri));
 
@@ -88,19 +96,19 @@ const TaskPage: Component = () => {
       try {
         const sourceCode = editor.getValue()
         model = eval(editor.getValue())
-        
+
         // eval the model 
         const newEvals: TestEval[] = []
         const numberOfTests = 6;
-        
+
         for (let i = 0; i < numberOfTests; i++)
           newEvals.push({ accuracy: 0, done: false } as TestEval)
-        
+
         let hasSetEvals = false
         let accMed = 0
         for (let i = 0; i < numberOfTests; i++) {
           const accuracy = await evalModel(getDatasetData()!, model)
-          if(hasSetEvals==false){
+          if (hasSetEvals == false) {
             setTaskEvals(newEvals)
             setErrorMessage("")
             hasSetEvals = true
