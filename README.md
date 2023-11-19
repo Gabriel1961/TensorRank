@@ -1,3 +1,9 @@
+## MLH Tracks
+Best typescript app: very well structured, modular code, using ts and jsx and solidJS <br>
+Best use of google cloud: I use Google firestore, auth, hosting and storage 
+Most creative use of github: I use github duh <br>
+Most innovative startupd idea: Just like Hackerank, it can earn a lot of $$$
+
 ## Usage
 
 ```bash
