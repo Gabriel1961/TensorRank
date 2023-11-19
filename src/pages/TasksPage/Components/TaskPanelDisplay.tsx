@@ -10,7 +10,7 @@ interface TaskPanelProps {
 const TaskPanelDisplay: Component<TaskPanelProps> = (props) => {
   return <div class={styles.container}>
     <A href={`/task/${encodeTaskTitleToUrl(props.task.title)}`}>
-      <h2>{props.task.title}</h2>
+      <h2 class={styles.h2}>{props.task.title}</h2>
     </A>
     <h3>{props.task.subtitle}</h3>
     <div class={styles.tagsContainer}>

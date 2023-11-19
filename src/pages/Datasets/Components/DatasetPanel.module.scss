@@ -10,8 +10,9 @@
 
 .tagsContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin-top: 10px;
+  font-size: 1.1rem;
 }
 
 .detailsPanels{

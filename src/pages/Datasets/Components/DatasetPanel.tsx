@@ -8,20 +8,20 @@ interface DatasetPanelProps {
   dataset: Dataset
 }
 
-function capitalize(word:string) {
+export function capitalizeFirstLetter(word:string) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
 const DatasetPanel: Component<DatasetPanelProps> = (props) => {
   return <div class={styles.container}>
     <A href={`/dataset/${encodeTaskTitleToUrl(props.dataset.name)}`}>
-      <h2>{capitalize(props.dataset.name)} Dataset</h2>
+      <h2>{capitalizeFirstLetter(props.dataset.name)} Dataset</h2>
       <p class={styles.p}>{props.dataset.description}</p>
       <div class={styles.detailsPanels}>
+        <p class={styles.roundContainer}>Subject Area: {props.dataset.subject}</p>
         <p class={styles.roundContainer}>Instances: {props.dataset.instances}</p>
         <p class={styles.roundContainer}>Features: {props.dataset.features}</p>
         <p class={styles.roundContainer}>Author: {props.dataset.author}</p>
-        <p class={styles.roundContainer}>Subject Area: {props.dataset.subject}</p>
       </div>
     </A>
     <div class={styles.tagsContainer}>

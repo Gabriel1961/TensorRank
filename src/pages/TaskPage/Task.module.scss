@@ -1,19 +1,20 @@
 .container{
   display: flex;
   height: 100%;
-  width: 100%;
-  align-items: center;
+  align-items: stretch;
   flex-direction: column;
+  padding: 40px;
 }
 
 .codeEditor {
   margin-top: 20px;
   margin-bottom: 20px;
   height: 500px;
-  width: 90%;
 }
 
 .h2{
+  font-size: 2rem;
+  margin-left: 0px;
 }
 
 .errorContainer{
@@ -27,6 +28,9 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: 90%;
-  margin-top:30px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: left;
 }

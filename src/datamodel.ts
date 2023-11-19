@@ -1,10 +1,12 @@
 import * as tf from "@tensorflow/tfjs"
+import { Timestamp } from "firebase/firestore"
 
 export interface Solution {
   id: string
   score: number
   taskId: string
   sourceCode: string
+  dateCreated: Timestamp
   author: {
     name: string
     id: string
@@ -16,6 +18,7 @@ export enum TaskTag {
   classification = "classification",
   images = "images",
   easy = "easy",
+  multivariate = "multivariate"
 }
 
 export interface Task {
@@ -30,12 +33,14 @@ export interface Dataset {
   id: string
   name: string
   description: string
+  longDescription: string 
   author: string
   features: number
   instances: number
   csvUrl: string
   subject: string 
 
+  chartImages: string[]
   headers: string[]
   lables: string[]
 

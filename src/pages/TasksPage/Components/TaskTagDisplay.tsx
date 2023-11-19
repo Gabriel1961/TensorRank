@@ -11,6 +11,7 @@ const TaskTagDisplay: Component<TaskTagDisplayProps> = (props) => {
       case TaskTag.classification: return "#34495e"
       case TaskTag.images: return "#1d5c85"
       case TaskTag.regression: return "#8e44ad"
+      case TaskTag.multivariate: return "#1d5c85";
     } 
   }
   return <div class={styles.container} style={`background-color:${getTagColor()};`} >

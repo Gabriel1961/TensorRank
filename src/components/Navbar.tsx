@@ -11,7 +11,6 @@ const Navbar: Component = () => {
       <img draggable={false} src={tfIcon} class={styles.logo} />
     </A>
     <A href="/" class={styles.header}>Home</A>
-    <A href="/scoreboard" class={styles.header} activeClass={styles.actsiveHeader}>Scoreboard</A>
     <A href="/tasks" class={styles.header} activeClass={styles.activeHeader}>Tasks</A>
     <A href="/datasets" class={styles.header} activeClass={styles.activeHeader}>Datasets</A>
     <A href="/about" class={styles.header} activeClass={styles.activeHeader}>About</A>

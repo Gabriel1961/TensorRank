@@ -11,6 +11,7 @@ const TasksPage = lazy(() => import("./pages/TasksPage/TasksPage"))
 const TaskPage = lazy(() => import("./pages/TaskPage/TaskPage"))
 const ScoreboardPage = lazy(() => import("./pages/Scoreboard/ScoreboardPage"))
 const DatasetsPage = lazy(() => import("./pages/Datasets/DatasetsPage"))
+const DatasetPage = lazy(()=> import("./pages/DatasetPage/DatasetPage"))
 
 export const App: Component = () => {
   return <LoginProvider>
@@ -21,7 +22,8 @@ export const App: Component = () => {
         <Route path="/" component={HomePage} />
         <Route path="/task/:taskName" component={TaskPage} />
         <Route path="/tasks" component={TasksPage} />
-        <Route path="/scoreboard" component={ScoreboardPage} />
+        <Route path="/dataset/:datasetName" component={DatasetPage} />
+        <Route path="/scoreboard/:taskId" component={ScoreboardPage} />
         <Route path="/datasets" component={DatasetsPage} />
         <Route path="/about" component={AboutPage} />
       </Routes>
